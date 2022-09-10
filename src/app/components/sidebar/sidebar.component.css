@@ -1,15 +1,18 @@
 nav {
   float: left;
-  width: 30%;
-  height: auto; /* only for demonstration, should be removed */
+  width: 200px;
+  height: 400px; /* only for demonstration, should be removed */
   background: #ccc;
-  padding: 20px;
+  padding: 46px;
 }
 
 /* Style the list inside the menu */
 nav ul {
   list-style-type: none;
   padding: 0;
+}
+nav ul li {
+  padding-bottom: 10px;
 }
 
 section::after {
