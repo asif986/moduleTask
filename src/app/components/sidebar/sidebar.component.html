@@ -1,9 +1,11 @@
-<section>
+<div class="">
     <nav>
         <ul>
-            <li><a routerLink="/" routerLinkActive="router-link-active">Link 1</a></li>
-            <li><a routerLink="/" routerLinkActive="router-link-active">Link 2</a></li>
-            <li><a routerLink="/" routerLinkActive="router-link-active">Link 3</a></li>
+            <ng-container *ngFor="let menu of menus">
+
+                <li><a (click)="navigationUrl(menu.route)">{{menu.name}}</a></li>
+            </ng-container>
         </ul>
     </nav>
-</section>
+
+</div>

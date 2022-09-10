@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { environment } from '../environments/environment';
+import { LayoutModule } from '../app/components/layout/layout.module';
+
 import { AngularFireModule } from '@angular/fire';
 @NgModule({
   declarations: [AppComponent],
@@ -12,6 +14,7 @@ import { AngularFireModule } from '@angular/fire';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
+    LayoutModule,
     AngularFireModule.initializeApp(environment.firebaseConfig), // initialize the angular firebase
   ],
   providers: [],
