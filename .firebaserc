@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "moduletask-14f71": {
+      "hosting": {
+        "moduleTask": [
+          "moduletask-14f71"
+        ]
+      }
+    }
+  }
+}
