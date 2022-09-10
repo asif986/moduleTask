@@ -6,8 +6,9 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { environment } from '../environments/environment';
 import { LayoutModule } from '../app/components/layout/layout.module';
-
 import { AngularFireModule } from '@angular/fire';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -15,6 +16,7 @@ import { AngularFireModule } from '@angular/fire';
     AppRoutingModule,
     SharedModule,
     LayoutModule,
+    HttpClientModule,
     AngularFireModule.initializeApp(environment.firebaseConfig), // initialize the angular firebase
   ],
   providers: [],

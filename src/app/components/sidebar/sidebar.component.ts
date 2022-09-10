@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-sidebar',
@@ -8,35 +10,22 @@ import { Router } from '@angular/router';
 })
 export class SidebarComponent implements OnInit {
   // define menus
-  menus: any[] = [
-    {
-      name: 'Module 1',
-      route: 'dashboard/module1',
-    },
-    {
-      name: 'Module 2',
-      route: 'dashboard/module2',
-    },
-    {
-      name: 'Module 3',
-      route: 'dashboard/module3',
-    },
-    {
-      name: 'Module 4',
-      route: 'dashboard/module4',
-    },
-    {
-      name: 'Module 5',
-      route: 'dashboard/module5',
-    },
-    {
-      name: 'Module 6',
-      route: 'dashboard/module6',
-    },
-  ];
-  constructor(public router: Router) {}
+  menus: any[] = [];
+  constructor(public router: Router, private http: HttpClient) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getMenusList();
+  }
+
+  // get menus list from json file
+  getMenusList() {
+    this.http
+      .get('assets/json/menus.json')
+      .pipe(map((response: any) => response.menus))
+      .subscribe((menusData: any) => {
+        this.menus = menusData;
+      });
+  }
 
   // menus navigation
   navigationUrl(route: any) {

@@ -1,0 +1,28 @@
+{
+    "menus": [
+        {
+            "name": "Module 1",
+            "route": "dashboard/module1"
+        },
+        {
+            "name": "Module 2",
+            "route": "dashboard/module2"
+        },
+        {
+            "name": "Module 3",
+            "route": "dashboard/module3"
+        },
+        {
+            "name": "Module 4",
+            "route": "dashboard/module4"
+        },
+        {
+            "name": "Module 5",
+            "route": "dashboard/module5"
+        },
+        {
+            "name": "Module 6",
+            "route": "dashboard/module6"
+        }
+    ]
+}
